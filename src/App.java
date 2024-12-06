@@ -3,15 +3,8 @@ import processing.core.*;
 public class App extends PApplet{
     int windowX = 600;
     int windowY = 600;
- 
-   
-    int circleSize;
-    int circleX;
-    int circleY;
     
-      // Variables to store shark's direction of movement
-      float sharkXDirection = 0;
-      float sharkYDirection = 0;
+
       int score = 0; // Variable to track the score
 
       int scene = 0;
