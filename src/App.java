@@ -49,29 +49,27 @@ public class App extends PApplet {
         for (shark s : sharks) {
             s.display();
             s.move();
-        }
-
-        shark alliTestShark = sharks.get(0);
-        if(alliTestShark.eats(fish1)){
+        if (s.eats(fish1)) {
             System.out.println("oh nooo!");
             score++; // Increase score when the shark eats the fish
-        }
-        text("Score: " + score, 10, 40); // Display the score
 
+            }
+        }
+
+  
+      
+        }
+        {
+        text("Score: " + score, 10, 40); // Display the score
+     
         fish1.display();
         textSize(25);
         fill(25);
-
-        // keep shark to move angles
-
-        // // Display the score
-
-        // fill(255); // Set text color to white
+     // shark alliTestShark = sharks.get(0);
+        // if(alliTestShark.eats(fish1)){
+   // fill(255); // Set text color to white
         // text("Score: " + score, 10, 40); // Draw score at top-left corner
-
         // // Check if shark catches the fish
-        
-
         
             // score++;
          // Increase score when circle is caught

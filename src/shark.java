@@ -44,7 +44,9 @@ public class shark {
 
     public boolean eats(fish toBeEaten) {
         if (canvas.dist(sharkX + sharkSize / 2, sharkY + sharkSize / 2, toBeEaten.getX(), toBeEaten.getY()) < 25 ) {
+            System.out.println("eaten!");
             return true;
+        
         }else{
             return false;
         }

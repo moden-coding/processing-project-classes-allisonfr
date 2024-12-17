@@ -36,7 +36,7 @@ public void goLeft(){
         fishX += speed; 
 }
 public float getX(){
-    return fishX;
+    return fishY;
 }
 
 public float getY(){
