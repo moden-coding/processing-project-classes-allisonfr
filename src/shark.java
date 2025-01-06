@@ -3,7 +3,7 @@ import processing.core.PImage;
 
 public class shark {
     float sharkX, sharkY; // Shark's position
-    float speed = 3; // Movement speed
+    float speed = 6; // Movement speed
     float sharkSize = 73;// size of shark
 
     PImage shark;
@@ -20,8 +20,7 @@ public class shark {
         sharkY = y;
         sharkXDirection = xDirection;
 
-        // Mr. Moden: constructor
-        // Mr. Moden: set up values here
+      
     }
 
     public void display() {
@@ -39,13 +38,19 @@ public class shark {
         }
         // if (sharkX = 600){
         // speed=-speed;
-        // }
+     
+ 
     }
-
+ boolean firstcollision = false;
+ 
+   
     public boolean eats(fish toBeEaten) {
         if (canvas.dist(sharkX + sharkSize / 2, sharkY + sharkSize / 2, toBeEaten.getX(), toBeEaten.getY()) < 25 ) {
-            System.out.println("eaten!");
             return true;
+            // if(!firstcollision){
+            //     return true;
+            // }
+            // firstcollision=true;
         
         }else{
             return false;
@@ -53,23 +58,4 @@ public class shark {
 
     }
 
-    // <
-    // SharkSize / 2 + fishSize / 2);
-
-    // public void setup(){
-    // Load the shark image
-    // shark = loadImage("shark.png");
-
-    // // from chatgpt
-    // Draw the shark with rotation
-    // pushMatrix(); // Save the current transformation state
-    // translate(sharkX + sharkSize / 2, sharkY + sharkSize / 2); // Move the origin
-    // to the center of the shark
-    // rotate(angle); // Rotate the shark to face the direction
-    // imageMode(CENTER); // Ensure the image is drawn from its center
-    // image(shark, 0, 0, sharkSize, sharkSize); // Draw the shark at the translated
-    // position
-    // popMatrix(); // Restore the previous transformation state
-
-    // }
 }

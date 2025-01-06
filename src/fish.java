@@ -4,7 +4,7 @@ import processing.core.PImage;
 public class fish {
 
     float fishX, fishY; // Fish's position
-    float speed = 8; // Movement speed
+    float speed = 11; // Movement speed
     float fishSize = 50;// size of fish
     PImage fish;
     PApplet canvas;
@@ -20,27 +20,41 @@ public class fish {
         fishY = y;
 
     }
-
+//display fish
     public void display() {
         canvas.image(fish, fishX, fishY, fishSize, fishSize);
 
     }
-
-    public void goUp(){
+//reset when first reaches top
+    public void goUp() {
         fishY -= speed;
+        // if (fishY <= 0) 
+        // reset();
+        
+        
     }
-public void goLeft(){
+    
+
+
+    public void goLeft() {
         fishX -= speed;
     }
-    public void goRight(){
-        fishX += speed; 
-}
-public float getX(){
-    return fishY;
-}
 
-public float getY(){
-    return fishX;
-}
+    public void goRight() {
+        fishX += speed;
+    }
 
+    public float getX() {
+        return fishX;
+    }
+
+    public float getY() {
+        return fishY;
+    }
+//reset fish to the middle of bottom screen when needed
+    public void reset() {
+        fishX = 275;
+        fishY = 587;
+
+    }
 }
